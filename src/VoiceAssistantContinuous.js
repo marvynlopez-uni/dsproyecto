@@ -95,13 +95,13 @@ export default function VoiceAssistantContinuous() {
       if (lower.includes('pausar asistente')) {
         setVoiceActive(false);
         speak(
-          'Asistente de voz en pausa. Di reanudar asistente para volver a activarlo.'
+          'noveomovil en pausa. Di reanudar asistente para volver a activarlo.'
         );
         return;
       }
       if (lower.includes('reanudar asistente')) {
         setVoiceActive(true);
-        speak('Asistente de voz reanudado.');
+        speak('noveomovil de voz reanudado.');
         return;
       }
       if (!voiceActive) {
@@ -242,7 +242,7 @@ export default function VoiceAssistantContinuous() {
     if (state.assistantState === 'awaiting_destination' && !listeningRef.current) {
       setListeningSafe(true);
       recognition.start();
-      speak('Bienvenido. ¿A dónde quieres ir hoy?');
+      speak('Bienvenido a noveomovil. ¿A dónde quieres ir hoy?');
     }
   }, [state.assistantState]);
 
@@ -255,7 +255,7 @@ export default function VoiceAssistantContinuous() {
     } else if (state.transportStatus === 'confirmed') {
       if (state.securityCode && state.driverEtaMinutes) {
         speak(
-          `Hemos encontrado un conductor accesible. El código de seguridad es ${state.securityCode}. El tiempo estimado de llegada es de aproximadamente ${state.driverEtaMinutes} minutos.`
+          `Hemos encontrado un conductor disponible. El código de seguridad es ${state.securityCode}. El tiempo estimado de llegada es de aproximadamente ${state.driverEtaMinutes} minutos.`
         );
       } else {
         speak('Hemos encontrado un conductor accesible para tu viaje.');
