@@ -83,30 +83,22 @@ Las rutas principales son:
 
 ## 4. Instalación y ejecución del frontend (React – carpeta dsproyecto)
 
-El frontend está en la carpeta `dsproyecto`.
+Abrir **otra** terminal nueva (o una nueva pestaña de la misma terminal):
 
-1. Abrir **otra** terminal y ubicarse en la carpeta del frontend:
+Si acabas de clonar el proyecto:
+cd NOMBRE_DE_LA_CARPETA_DEL_PROYECTO # la carpeta que se descarga desde GitHub
 
-cd dsproyecto
+Si ya estabas dentro del backend, primero sube un nivel:
+cd .. # volver a la carpeta que contiene TODO el proyecto
 
-
-2. Instalar dependencias:
-npm install
-
-
-3. (Opcional) Configurar la URL del backend en un archivo `.env` del frontend si la app lo usa.  
-   Por ejemplo:
-
-REACT_APP_API_BASE_URL=http://localhost:4000
+npm install # instalar dependencias del frontend (solo la primera vez)
+npm start # iniciar la app React en http://localhost:3000
 
 
-4. Iniciar la app de React en modo desarrollo:
-npm start
+> Importante: ejecutar `npm install` y luego `npm start` en la misma carpeta raíz donde está este README y el archivo `package.json` del frontend.
 
 
-La aplicación se abrirá en el navegador en:
-
-- `http://localhost:3000`
+El frontend se ejecuta desde la misma carpeta raíz del proyecto donde se encuentra este README (la carpeta que se descarga desde GitHub).
 
 ---
 
